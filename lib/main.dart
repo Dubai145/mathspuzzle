@@ -39,10 +39,11 @@ class _FirstPageState extends State<FirstPage> {
                   child: Text(
                     'Math Puzzles',
                     style: TextStyle(
-                        color: Colors.blueAccent,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'namepuzzle'),
+                      color: Colors.blueAccent,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      // fontFamily: 'namepuzzle'
+                    ),
                   ),
                 ),
               ), // math puzzle name
