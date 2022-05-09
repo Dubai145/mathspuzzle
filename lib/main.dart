@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mathspuzzle/second.dart';
-import 'package:mathspuzzle/t%20page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -96,7 +95,7 @@ class _FirstPageState extends State<FirstPage> {
                             onPressed: () {
                               Navigator.push(context, MaterialPageRoute(
                                 builder: (context) {
-                                  return PuzzleLevel();
+                                  return secondpage();
                                 },
                               ));
                             },
