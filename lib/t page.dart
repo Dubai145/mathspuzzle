@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:math_puzzle/main.dart';
+
+import 'main.dart';
 
 class ContinuePage extends StatefulWidget {
   const ContinuePage({Key? key}) : super(key: key);

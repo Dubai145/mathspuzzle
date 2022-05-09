@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:math_puzzle/continue_page.dart';
-import 'package:math_puzzle/privacy_page.dart';
-import 'package:math_puzzle/puzzlelevel.dart';
+import 'package:mathspuzzle/second.dart';
+import 'package:mathspuzzle/t%20page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -193,11 +192,11 @@ class _FirstPageState extends State<FirstPage> {
                     ),
                     child: TextButton(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(
-                            builder: (context) {
-                              return PrivacyPage();
-                            },
-                          ));
+                          // Navigator.push(context, MaterialPageRoute(
+                          //   builder: (context) {
+                          //     return PrivacyPage();
+                          //   },
+                          // ));
                         },
                         child: Center(
                           child: Text(
