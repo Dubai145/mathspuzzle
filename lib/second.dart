@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class secondpage extends StatefulWidget {
-  const secondpage({Key? key}) : super(key: key);
+class PuzzleLevel extends StatefulWidget {
+  const PuzzleLevel({Key? key}) : super(key: key);
 
   @override
-  State<secondpage> createState() => _PuzzleLevelState();
+  State<PuzzleLevel> createState() => _PuzzleLevelState();
 }
 
-class _PuzzleLevelState extends State<secondpage> {
+class _PuzzleLevelState extends State<PuzzleLevel> {
   @override
   List Mynumber = [
     1,

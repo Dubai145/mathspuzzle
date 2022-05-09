@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'main.dart';
 
-class tpage extends StatefulWidget {
-  const tpage({Key? key}) : super(key: key);
+class ContinuePage extends StatefulWidget {
+  const ContinuePage({Key? key}) : super(key: key);
 
   @override
-  State<tpage> createState() => _ContinuePageState();
+  State<ContinuePage> createState() => _ContinuePageState();
 }
 
-class _ContinuePageState extends State<tpage> {
+class _ContinuePageState extends State<ContinuePage> {
   List P_image = [
     'image/p1.png',
     'image/p2.png',

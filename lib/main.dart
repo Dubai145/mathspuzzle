@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mathspuzzle/second.dart';
+import 'package:mathspuzzle/t%20page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -36,7 +37,7 @@ class _FirstPageState extends State<FirstPage> {
                 color: Colors.transparent,
                 child: Center(
                   child: Text(
-                    'M a t h  P u z z l e s',
+                    'Math Puzzles',
                     style: TextStyle(
                         color: Colors.blueAccent,
                         fontSize: 30,
@@ -95,7 +96,7 @@ class _FirstPageState extends State<FirstPage> {
                             onPressed: () {
                               Navigator.push(context, MaterialPageRoute(
                                 builder: (context) {
-                                  return secondpage();
+                                  return PuzzleLevel();
                                 },
                               ));
                             },
