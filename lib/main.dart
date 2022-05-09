@@ -19,10 +19,20 @@ class FirstPage extends StatefulWidget {
 class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
+    double totalheight = MediaQuery.of(context).size.height;
+    double totalawidth = MediaQuery.of(context).size.width;
+    double statusbarheight = MediaQuery.of(context).padding.top;
+    double navigationbarheight = MediaQuery.of(context).padding.bottom;
+
+    double appbarheight = kToolbarHeight;
+
+    double bodyheight =
+        totalheight - statusbarheight - navigationbarheight - appbarheight;
+
     return Scaffold(
       body: Container(
-        height: 700,
-        width: 400,
+        height: totalheight * .80,
+        width: totalawidth * .20,
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('image/background.jpg'), fit: BoxFit.cover),
@@ -32,8 +42,8 @@ class _FirstPageState extends State<FirstPage> {
             children: [
               Container(
                 margin: EdgeInsets.fromLTRB(0, 80, 0, 0),
-                height: 70,
-                width: 300,
+                height: totalheight * .7,
+                width: totalawidth * .30,
                 color: Colors.transparent,
                 child: Center(
                   child: Text(
