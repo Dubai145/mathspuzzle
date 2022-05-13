@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mathspuzzle/second.dart';
 import 'package:mathspuzzle/t%20page.dart';
 
+
+
 void main() {
   runApp(MaterialApp(
     home: FirstPage(),
@@ -50,7 +52,7 @@ class _FirstPageState extends State<FirstPage> {
                     'Math Puzzles',
                     style: TextStyle(
                       color: Colors.blueAccent,
-                      fontSize: 30,
+                      fontSize: 25,
                       fontWeight: FontWeight.bold,
                       // fontFamily: 'namepuzzle'
                     ),
