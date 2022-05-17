@@ -70,8 +70,7 @@ class _stage1State extends State<stage1> {
                     alignment: Alignment.center,
                     height: 70,
                     width: 220,
-                    child: Text(
-                      "Leval ${widget.level + 1}",
+                    child: Text("Leval ${widget.level + 1}",
                       style: TextStyle(
                           fontSize: 41,color: Colors.white),
                     ),
@@ -172,7 +171,7 @@ class _stage1State extends State<stage1> {
                             msg: "wrong answer",
                             toastLength: Toast.LENGTH_SHORT,
                             gravity: ToastGravity.BOTTOM_LEFT,
-                            timeInSecForIosWeb: 1,
+                            //timeInSecForIosWeb: 1,
                             backgroundColor: Colors.brown,
                             fontSize: 17.0);
                       }
@@ -182,7 +181,7 @@ class _stage1State extends State<stage1> {
                       alignment: Alignment.center,
                       height: toolbarheight,
                       width: 95,
-                      child: Text("Submit", style: TextStyle(fontSize: 26,color: Colors.white),),
+                      child: Text("Submit",style: TextStyle(fontSize: 26,color: Colors.white),),
                     ),
                   ),
                 ],
@@ -242,9 +241,7 @@ class _stage1State extends State<stage1> {
                 height: 48,
                 width: 35,
                 child: Center(
-                    child: Text(
-                      "$i",
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    child: Text("$i",style: TextStyle(fontSize: 20, color: Colors.white),
                     )),
               ))));
 
