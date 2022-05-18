@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:mathspuzzle/stage1page.dart';
+import 'package:mathspuzzle/tpage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -25,6 +26,7 @@ class _firstpageState extends State<firstpage> {
   String f1 = "myfamily";
   int? level;
   bool status = false;
+  var model;
 
   @override
   void initState() {
@@ -34,7 +36,6 @@ class _firstpageState extends State<firstpage> {
   }
 
   Future<void> getShareprefre() async {
-    var model;
     model.pref = await SharedPreferences.getInstance();
     level = model.pref!.getInt("level") ?? 0;
     model.statuslist.clear();
@@ -80,8 +81,8 @@ class _firstpageState extends State<firstpage> {
                   ),
                 ),
                 Container(
-                  height: 450,
-                  width: 400,
+                  height: 650,
+                  width: 450,
                   decoration: BoxDecoration(
                     color: Colors.black,
                     image: DecorationImage(
@@ -94,7 +95,8 @@ class _firstpageState extends State<firstpage> {
                       children: [
                         Container(
                           margin: EdgeInsets.all(6),
-                          height: 50,
+                          height: 50
+                          ,
                           width: 160,
                           decoration: BoxDecoration(
                               color: Colors.transparent,
@@ -107,7 +109,6 @@ class _firstpageState extends State<firstpage> {
                                   },
                                 ));
                                 setState(() {
-                                  var model;
                                   model.pref!.getInt('level');
                                 });
                               },
@@ -131,11 +132,11 @@ class _firstpageState extends State<firstpage> {
                               borderRadius: BorderRadius.circular(10)),
                           child: TextButton(
                               onPressed: () {
-                                // Navigator.push(context, MaterialPageRoute(
-                                //   builder: (context) {
-                                //     return selectstage('');
-                                //   },
-                                // ));
+                                Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) {
+                                    return selectstage('');
+                                  },
+                                ));
                               },
                               child: Center(
                                 child: Text(
@@ -149,12 +150,24 @@ class _firstpageState extends State<firstpage> {
                               )),
                         ),
                         Container(
-                          margin: EdgeInsets.all(6),height: 50,width: 160,
+                          margin: EdgeInsets.all(6),
+                          height: 50,
+                          width: 160,
                           decoration: BoxDecoration(
                               color: Colors.transparent,
-                              borderRadius: BorderRadius.circular(10)
-                          ),
-                          child: TextButton(onPressed: () {},child: Center(child: Text('BUY PRO',style: TextStyle(fontSize: 25,fontFamily: 'boardfont',color: Colors.white),textAlign: TextAlign.center,),)),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: TextButton(
+                              onPressed: () {},
+                              child: Center(
+                                child: Text(
+                                  'BUY PRO',
+                                  style: TextStyle(
+                                      fontSize: 25,
+                                      fontFamily: 'boardfont',
+                                      color: Colors.white),
+                                  textAlign: TextAlign.center,
+                                ),
+                              )),
                         ),
                       ],
                     ),
@@ -164,7 +177,10 @@ class _firstpageState extends State<firstpage> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Container(margin: EdgeInsets.all(10),height: 40,width: 40,
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      height: 40,
+                      width: 40,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
@@ -173,11 +189,13 @@ class _firstpageState extends State<firstpage> {
                               blurRadius: 3,
                               spreadRadius: 0,
                             )
-                          ]
-                      ),
-                      child: IconButton(onPressed: () {},icon: Icon(Icons.share)),
+                          ]),
+                      child: IconButton(onPressed: () {}, icon: Icon(Icons.share)),
                     ),
-                    Container(margin: EdgeInsets.all(10),height: 40,width: 40,
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      height: 40,
+                      width: 40,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
@@ -186,9 +204,9 @@ class _firstpageState extends State<firstpage> {
                               blurRadius: 3,
                               spreadRadius: 0,
                             )
-                          ]
-                      ),
-                      child: IconButton(onPressed: () {},icon: Icon(Icons.email_outlined)),
+                          ]),
+                      child: IconButton(
+                          onPressed: () {}, icon: Icon(Icons.email_outlined)),
                     ),
                   ],
                 ),

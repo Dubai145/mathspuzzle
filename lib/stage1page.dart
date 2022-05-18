@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:mathspuzzle/main.dart';
 import 'package:mathspuzzle/winpage.dart';
 
+import 'main.dart';
 
 class stage1 extends StatefulWidget {
   int level;
@@ -28,7 +29,7 @@ class _stage1State extends State<stage1> {
 
     return WillPopScope(
       child: Scaffold(
-        backgroundColor: Colors.brown.shade100,
+        backgroundColor: Colors.brown,
         body: Container(
           width: double.infinity,
           decoration: BoxDecoration(
@@ -45,7 +46,6 @@ class _stage1State extends State<stage1> {
                 children: [
                   InkWell(
                     onTap: () {
-
                       model.statuslist[widget.level] = "skip";
                       model.pref!.setString("status${widget.level}", "skip");
                       setState(() {
@@ -70,9 +70,10 @@ class _stage1State extends State<stage1> {
                     alignment: Alignment.center,
                     height: 70,
                     width: 220,
-                    child: Text("Leval ${widget.level + 1}",
+                    child: Text(
+                      "Leval ${widget.level + 1}",
                       style: TextStyle(
-                          fontSize: 41,color: Colors.white),
+                          fontSize: 41, fontFamily: f1, color: Colors.white),
                     ),
                     decoration: BoxDecoration(
                         image: DecorationImage(
@@ -171,7 +172,7 @@ class _stage1State extends State<stage1> {
                             msg: "wrong answer",
                             toastLength: Toast.LENGTH_SHORT,
                             gravity: ToastGravity.BOTTOM_LEFT,
-                            //timeInSecForIosWeb: 1,
+                            timeInSecForIosWeb: 1,
                             backgroundColor: Colors.brown,
                             fontSize: 17.0);
                       }
@@ -181,7 +182,11 @@ class _stage1State extends State<stage1> {
                       alignment: Alignment.center,
                       height: toolbarheight,
                       width: 95,
-                      child: Text("Submit",style: TextStyle(fontSize: 26,color: Colors.white),),
+                      child: Text(
+                        "Submit",
+                        style: TextStyle(
+                            fontSize: 26, fontFamily: f1, color: Colors.white),
+                      ),
                     ),
                   ),
                 ],
@@ -204,18 +209,24 @@ class _stage1State extends State<stage1> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text("Do You Want To Exit"),actions: [FlatButton(
-            onPressed: () {
-          Navigator.pop(context);
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-            return firstpage();
-          },));
-
-        }, child:Text("yes") ),
-          FlatButton(onPressed: () {
-            Navigator.pop(context);
-          }, child: Text("no"))
-        ],
+          title: Text("Do You Want To Exit"),
+          actions: [
+            FlatButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushReplacement(context, MaterialPageRoute(
+                    builder: (context) {
+                      return firstpage();
+                    },
+                  ));
+                },
+                child: Text("yes")),
+            FlatButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("no"))
+          ],
         );
       },
     );
@@ -241,20 +252,90 @@ class _stage1State extends State<stage1> {
                 height: 48,
                 width: 35,
                 child: Center(
-                    child: Text("$i",style: TextStyle(fontSize: 20, color: Colors.white),
+                    child: Text(
+                      "$i",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     )),
               ))));
-
     }
-
     return list;
   }
 
   List<String> answer = [
-    "10", "25", "6", "14", "128", "7", "50", "1025", "100", "3", "212", "3011", "14", "16", "1",
-    "2", "44", "45", "625", "1", "13", "47", "50", "34", "6", "41", "16", "126", "82", "14",
-    "7", "132", "34", "48", "42", "288", "45", "4", "111", "47", "27", "87", "22", "253", "12",
-    "38", "178", "1", "6", "10", "2", "20", "7", "511", "143547", "84", "11", "27", "3", "5",
-    "39", "31", "10", "130", "22", "3", "14", "42", "164045", "11", "481", "86", "84", "13", "8"
+    "10",
+    "25",
+    "6",
+    "14",
+    "128",
+    "7",
+    "50",
+    "1025",
+    "100",
+    "3",
+    "212",
+    "3011",
+    "14",
+    "16",
+    "1",
+    "2",
+    "44",
+    "45",
+    "625",
+    "1",
+    "13",
+    "47",
+    "50",
+    "34",
+    "6",
+    "41",
+    "16",
+    "126",
+    "82",
+    "14",
+    "7",
+    "132",
+    "34",
+    "48",
+    "42",
+    "288",
+    "45",
+    "4",
+    "111",
+    "47",
+    "27",
+    "87",
+    "22",
+    "253",
+    "12",
+    "38",
+    "178",
+    "1",
+    "6",
+    "10",
+    "2",
+    "20",
+    "7",
+    "511",
+    "143547",
+    "84",
+    "11",
+    "27",
+    "3",
+    "5",
+    "39",
+    "31",
+    "10",
+    "130",
+    "22",
+    "3",
+    "14",
+    "42",
+    "164045",
+    "11",
+    "481",
+    "86",
+    "84",
+    "13",
+    "8"
   ];
 }
