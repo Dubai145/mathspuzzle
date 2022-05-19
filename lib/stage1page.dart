@@ -141,8 +141,7 @@ class _stage1State extends State<stage1> {
                           ));
                         } else if (levelstatus == "skip") {
                           model.statuslist[widget.level] = "clear";
-                          model.pref!
-                              .setString("status${widget.level}", "clear");
+                          model.pref!.setString("status${widget.level}", "clear");
                           model.statuslist[widget.level] = "skip";
                           model.pref!.setInt("level", widget.level);
                           Navigator.pushReplacement(context, MaterialPageRoute(
@@ -211,7 +210,7 @@ class _stage1State extends State<stage1> {
         return AlertDialog(
           title: Text("Do You Want To Exit"),
           actions: [
-            FlatButton(
+            TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                   Navigator.pushReplacement(context, MaterialPageRoute(
@@ -221,7 +220,7 @@ class _stage1State extends State<stage1> {
                   ));
                 },
                 child: Text("yes")),
-            FlatButton(
+            TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },

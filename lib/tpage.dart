@@ -104,7 +104,7 @@ class _selectstageState extends State<selectstage> {
         return AlertDialog(
           title: Text("Do You Want to Exit"),
           actions: [
-            FlatButton(
+            TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                   Navigator.pushReplacement(context, MaterialPageRoute(
@@ -114,7 +114,7 @@ class _selectstageState extends State<selectstage> {
                   ));
                 },
                 child: Text("Yes")),
-            FlatButton(
+            TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },

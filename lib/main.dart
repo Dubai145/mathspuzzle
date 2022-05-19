@@ -32,10 +32,10 @@ class _firstpageState extends State<firstpage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    getShareprefre();
+    getSharedPreferences();
   }
 
-  Future<void> getShareprefre() async {
+  Future<void> getSharedPreferences() async {
     model.pref = await SharedPreferences.getInstance();
     level = model.pref!.getInt("level") ?? 0;
     model.statuslist.clear();
